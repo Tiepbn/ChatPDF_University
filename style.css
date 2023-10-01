@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    font-family: "Poppins",sans-serif;
+
+    
+}
+body{
+    background:#111222;
+
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    color: #fff ;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-title{
+    font-size: 4em;
+    margin-bottom: 50px;
+    
+
+}
+.content{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .image {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden; /* Thay đổi thành "hidden" để che dấu phần nào của ảnh nếu nó vượt ra khỏi khung hình */
+
+   
+}
+
+.content .image img {
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.content .text-box {
+    z-index: 222;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1) ;
+    border-radius: 20px;
+    transform: translate(-80px, 50px);
+}
+.content .text-box h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+
+}
+.media-icons{
+    margin-top: 100px;
+    
+}
+.media-icons a {
+    color: #fff;
+    font-size: 2em;
+    margin: 60px;
+}
+
+
+
+
+
+
+main {
+    position:absolute;
+    top: 200%;
+    left: 90%;
+    transform: translate(-100%,-100%);
+    width:80%;
+    overflow: hidden;
+    border-radius: 10px;
+    height:100% ;
+    
+ 
+}
+
+header{
+    background-color: rgb(52, 152, 219);
+    color: white;
+    padding: 7px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+.title .h1 {
+    font-family:"Poppins",sans-serif ;
+    font-size: 32px;
+    margin-left: 10px;
+}
+.button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.contai{
+    background-color: rgb(230, 126, 34);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+}
+.contai .users-window{
+    width: 350px;
+    color: black;
+    background-color: wheat;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+   
+}
+.users-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+ .users-head h4 {
+    background-color: white;
+    padding: 0 8px;
+    border-radius: 50px;
+
+}
+ .users-list{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom:15px ;
+}
+.chat-window{
+    width: 100%;
+    border-radius:10px ;
+    background-color: wheat;
+}
+.chat-window .chats{
+    min-height: 70vh;
+    padding: 20px;
+    
+}
+.user-join{
+    font-size: 0.9rem;
+    color: darkgrey;
+    background-color: white;
+    border-radius: 50px;
+    width: max-content;
+    padding:7px 20px ;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.chat-window .message{
+    color: black;
+    background-color:white ;
+    padding: 5px 15px;
+    max-width: 400px;
+    margin-bottom: 15px;
+    border-radius: 10px 50px 50px 10px;
+}
+.chat-window .message p {
+    font-size: 16px;
+}
