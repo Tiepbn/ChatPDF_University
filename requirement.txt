@@ -1,0 +1,5 @@
+flask
+login
+SQLAlchemy
+flask-wtf
+wtforms
