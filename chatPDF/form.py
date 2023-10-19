@@ -1,6 +1,6 @@
-# from flask_wtf import FlaskForm
-# from wtforms import StringFiled
-# from chatPDF.models import User
+from flask_wtf import FlaskForm
+from wtforms import StringFiled
+from chatPDF.models import User
 
 # class RegisterForm(FlaskForm):
 #     def validate_username(self, username_to_check):
