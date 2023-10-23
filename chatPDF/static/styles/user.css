@@ -1,0 +1,121 @@
+.user{
+    max-height: 100vh;
+    position: sticky;
+
+}
+
+.header-img{
+    width: 200px;
+    /* height: 120px; */
+
+}
+
+.header-btn{
+    height: 40px;
+    text-align: center;
+}
+
+.user-new{
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    border: 2px solid rgb(163, 159, 159);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.user-new a{
+    color: var(--primary-color-2);
+}
+
+
+.user-list-menu{
+    height: 100vh;
+    padding-right: 0;
+}
+
+.user-menu-topic{
+    overflow: scroll;
+}
+
+.user-topic{
+    padding-left: 24px;
+}
+
+.topic-list-title{
+    color: #9c9ca2;
+    font-size: 14px;
+    padding-left: 8px;
+    
+}
+
+.topic-list-item{
+    padding: 10px 8px;
+}
+
+.topic-list-item a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.topic-list-item:hover{
+    background-color: #9c9ca2;
+    border-radius: 5px;
+}
+
+.user-account{
+    padding: 8px 0 8px 8px;
+    border-top: 1px solid #9c9ca2;
+    bottom: 0;
+    position: sticky;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.user-account a{
+    text-decoration: none;
+}
+
+.user-account-title{
+    color: #9c9ca2;
+    margin: 16px 0;
+    padding: 16px 0;
+
+}
+
+.user-account-info{
+    
+}
+
+.account-btn{
+    background: none;
+    margin-top: 16px;
+    border: none;
+    padding: 8px 0;
+    outline: none;
+}
+
+.account-btn:focus{
+    outline: none;
+}
+.user-account-box-img {
+
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.user-account-box-img span{
+    padding: 8px;
+    background-color: var(--primary-color-2);
+}
+
+.user-account-name{
+    margin-left: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+
+}

@@ -15,4 +15,9 @@ def login():
 def sigin():
     return render_template('sigin.html')
 
+@app.route('/baseuser')
+def baseuser():
+    return render_template('baseuser.html')
+
+
  
