@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0; 
     text-decoration: none;
-    list-style: none;   
+    list-style: none;
 }
 
 html{
@@ -20,11 +20,12 @@ html{
     font-family: "Poppins",sans-serif;
     width: 100%;
     min-height: 100vh;
-    font-size: 16px;
+    font-size: 16px;  
+    overflow: hidden;
 }
 
 body{
-    background:#111222;
+    /* background:#111222; */
 }
 
 .relative {

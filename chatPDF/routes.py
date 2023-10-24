@@ -11,9 +11,9 @@ def home():
 def login():
     return render_template('login.html')
     
-@app.route('/sigin')
-def sigin():
-    return render_template('sigin.html')
+@app.route('/sigup')
+def sigup():
+    return render_template('sigup.html')
 
 @app.route('/baseuser')
 def baseuser():
