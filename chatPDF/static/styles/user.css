@@ -1,3 +1,4 @@
+/* Tai khoan khi đăng nhập */
 .user{
     max-height: 100vh;
     position: sticky;
@@ -157,7 +158,7 @@
     top: -70%;
     left: 30%;
     object-fit: scale-down;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
 .user-chatPDF-conversation{
@@ -190,19 +191,25 @@
 
 .chat-item{
     margin: 8px;
+    color: var(--primary-color);
+}
+
+.chat-chat .chat-item{
+    color: var(--primary-color-2);
 }
 
 .chatPDF-message{
     margin: 32px 150px;
-    width: 58%;
-    bottom: 0;
+    bottom: 32px;
     border-radius: 25px;
     cursor: text;
-    position: fixed;
+    position: sticky;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     border: 1px solid #545456;
     padding: 0 16px;
+    background-color: white;
 }
 
 .chatPDF-message textarea{
@@ -215,4 +222,30 @@
 .chatPDF-message-btn{
     all:unset;
     color: #757575;
+}
+
+/* Tài khoản khi không đăng nhập */
+
+.notaccount{
+    background-color: #111222;
+    padding: 16px;
+    bottom: 0;
+    float: inline-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.notaccount h3{
+    color: var(--primary-color-2);
+    margin: 24px 0;
+}
+
+.notaccount-list li{
+    padding: 16px 0;
+    color: #757575;
+}
+
+.notaccount-list li:hover{
+    color: white;
 }

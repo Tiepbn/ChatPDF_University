@@ -19,5 +19,13 @@ def sigup():
 def baseuser():
     return render_template('baseuser.html')
 
+@app.route('/usernotaccount')
+def usernotaccount():
+    return render_template('usernotaccount.html')
+
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
 
  

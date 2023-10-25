@@ -1,8 +1,6 @@
 .home-chat{
     display: flex;
     margin: 0;
-    background:#111222;
-    height: 100%;
 }
 
 .home-chat-header{
@@ -62,14 +60,7 @@
 .media-icons a {
     color: #fff;
     font-size: 2em;
-    margin: 60px;
-}
-
-.usernotacction{
-    height: 710px;
-    width: 100%;
-    border: 2px solid #b6b6c2;
-    display: fixed;
+    /* margin: 60px; */
 }
 
 .home_message{

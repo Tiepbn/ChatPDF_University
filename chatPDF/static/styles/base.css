@@ -19,14 +19,11 @@ html{
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     font-size: 16px;  
     overflow: hidden;
 }
 
-body{
-    /* background:#111222; */
-}
 
 .relative {
     position: relative;
