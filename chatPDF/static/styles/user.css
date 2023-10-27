@@ -19,7 +19,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    /* background-color: white; */
     padding: 10px 0;
     border: 2px solid #545456;
     border-radius: 10px;
@@ -32,8 +31,8 @@
 
 
 .user-list-menu{
+    height: 100vh;
     width: 20%;
-    padding-right: 0;
     background:#111222;
 }
 
@@ -51,19 +50,12 @@
     height: 20px;
 }
 
-::-webkit-scrollbar-track{
-    background-color: white;
-}
-
-
 .user-menu-topic{
     position: sticky;
     height: 78vh;
+    padding: 24px 0;
 }
 
-.user-topic{
-    padding-left: 24px;
-}
 
 .topic-list-title{
     color: #545456;
@@ -75,17 +67,36 @@
 
 .topic-list-item{
     padding: 10px 8px;
+
 }
 
 .topic-list-item a{
     text-decoration: none;
     color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topic-item-name{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 180px;
+
 }
 
 .topic-list-item:hover,  
 .user-account-info:hover{
     background-color: #3d3d3e;
     border-radius: 5px;
+}
+
+.topic-item-icon button{
+    all: unset;
+    padding-left: 8px;
+
+
 }
 
 .user-account{
@@ -234,15 +245,16 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 20%;
 }
 
-.notaccount h3{
+.notaccount h4{
     color: var(--primary-color-2);
     margin: 24px 0;
 }
 
 .notaccount-list li{
-    padding: 16px 0;
+    padding: 10px 0;
     color: #757575;
 }
 
