@@ -100,16 +100,17 @@
 }
 
 .user-account{
-    padding: 8px 0 8px 8px;
     border-top: 1px solid #545456;
     top: 0;
     position: sticky;
     overflow: hidden;
     z-index: 1;
+    padding-top: 8px;
 }
 
 .user-account a{
     text-decoration: none;
+    padding: 8px 0 8px 8px;
 }
 
 .user-account-title{
@@ -134,6 +135,7 @@
 
     font-weight: 600;
     color: white;
+    padding-left: 8px;
 
 }
 
@@ -156,6 +158,37 @@
     width: 80%; 
     position: relative; 
 
+}
+
+.user-logout {
+    /* display: none; */
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    background-color: #333;
+    animation: logout ease-in .3s;
+}
+
+@keyframes logout{
+    0%{
+        transform: translateY(20%);
+        opacity: 0
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.user-logout a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.user-logout span{
+    margin-left: 8px;
 }
 
 .background-image {

@@ -47,7 +47,7 @@
           </a>
 
           <div class="user-account-info">
-            <div>
+            <!-- <div> -->
               <button
                 type="button"
                 class="d-flex w-full items-center account-btn"
@@ -57,7 +57,17 @@
                 </div>
                 <div class="user-account-name">hoangthikhuyen293@gmail.com</div>
               </button>
-            </div>
+
+              <div class="user-logout" id="user-logout" style="display: none">
+                <a href="{{url_for('home')}}">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <span>
+                    Đăng xuất
+                  </span>
+                </a>
+
+              </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -119,6 +129,31 @@
         // Xóa nội dung trong textarea
         messageInput.value = '';
     });
+</script>
+
+<script>
+  var acctionBtn = document.querySelector('.account-btn')
+  var chatLogout = document.querySelector('.user-chatPDF')
+  var menuLogout = document.querySelector('.user-menu-topic')
+  var logout = document.getElementById('user-logout')
+  acctionBtn.addEventListener('click', function(){
+      if(logout.style.display == 'none'){
+        logout.style.display = 'block';
+        acctionBtn.style.background = '#3d3d3e';
+      }else{
+        logout.style.display = 'none';
+        acctionBtn.style.background = 'none';
+      }
+  })
+  chatLogout.addEventListener('click', function(){
+      logout.style.display = 'none';
+      acctionBtn.style.background = 'none';
+  })
+  menuLogout.addEventListener('click', function(){
+      logout.style.display = 'none';
+      acctionBtn.style.background = 'none';
+  })
+
 </script>
 
 {% endblock %}
