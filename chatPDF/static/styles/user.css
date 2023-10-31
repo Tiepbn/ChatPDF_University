@@ -110,14 +110,18 @@
 
 .user-account a{
     text-decoration: none;
-    padding: 8px 0 8px 8px;
 }
 
 .user-account-title{
     color: #545456;
-    margin: 16px 0;
-    padding: 16px 0;
+    font-size: 15px;
 
+}
+
+.user-account-header{
+    padding: 0 8px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .account-btn{
@@ -160,36 +164,15 @@
 
 }
 
-.user-logout {
-    /* display: none; */
-    position: absolute;
-    top: 8px;
-    width: 100%;
-    background-color: #333;
-    animation: logout ease-in .3s;
-}
+.user-logout{
+    font-weight: 600;
 
-@keyframes logout{
-    0%{
-        transform: translateY(20%);
-        opacity: 0
-    }
-    100%{
-        transform: translateY(0%);
-        opacity: 1;
-    }
 }
 
 .user-logout a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    color: #545456;
 }
 
-.user-logout span{
-    margin-left: 8px;
-}
 
 .background-image {
     background-image: url('../images/logo.png');
