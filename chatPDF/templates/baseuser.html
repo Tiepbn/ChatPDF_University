@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="user-chatPDF">
-        <div class="user-chatPDF-conversation scroll">
+        <div class="user-chatPDF-conversation scroll" id="scrollable-content">
             <div class="user-chat" id="user-chat" style="display: none;">
                 <div class="chat-tk" style="display: flex; justify-content: flex-end;">
                     <span>HK</span>
@@ -123,6 +123,11 @@
         // Xóa nội dung trong textarea
         messageInput.value = '';
     });
+</script>
+
+<script>
+  var scrollableContent = document.getElementById("scrollable-content");
+  scrollableContent.scrollTop = scrollableContent.scrollHeight;
 </script>
 
 

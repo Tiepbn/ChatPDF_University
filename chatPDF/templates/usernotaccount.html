@@ -13,7 +13,7 @@
         >Đăng Nhập</a>
     </div>
     <div class="user-chatPDF">
-        <div class="user-chatPDF-conversation scroll">
+        <div class="user-chatPDF-conversation scroll" id="scrollable-content">
             <div class="user-chat">
                 <div class="chat-tk" style="display: flex; justify-content: flex-end;">
                     <span>HK</span>
@@ -78,5 +78,10 @@
         </div>
     </div>
 </div>
+
+<script>
+    var scrollableContent = document.getElementById("scrollable-content");
+    scrollableContent.scrollTop = scrollableContent.scrollHeight;
+</script>
 
 {% endblock %}

@@ -107,7 +107,7 @@
         </div>
         
         <div class="admin-list">
-            <div class="scroll">
+            <div class="scroll" id="scrollable-content">
                 <div class="user-chat">
                     <div class="chat-tk" style="display: flex; justify-content: flex-end;">
                         <span>HK</span>
@@ -187,6 +187,11 @@
         adList.classList.add("active");
       };
     });
+  </script>
+
+  <script>
+    var scrollableContent = document.getElementById('scrollable-content')
+    scrollableContent.scrollTop = scrollableContent.scrollHeight;
   </script>
 
 {% endblock %}
