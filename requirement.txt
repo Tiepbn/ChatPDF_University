@@ -3,9 +3,10 @@ login
 SQLAlchemy
 flask-wtf
 wtforms
- langchain
- PyPDF
- python-dotenv
- streamlit
- faiss-cpu
- streamlit-extras
+openai
+langchain
+PyPDF
+python-dotenv
+faiss-cpu
+dotenv
+tiktoken
