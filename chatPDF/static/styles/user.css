@@ -1,19 +1,19 @@
 /* Tai khoan khi đăng nhập */
-.user{
+.user {
     max-height: 100vh;
     position: sticky;
 }
 
-.header-img{
+.header-img {
     width: 200px;
 }
 
-.header-btn{
+.header-btn {
     height: 40px;
     text-align: center;
 }
 
-.user-new{
+.user-new {
     z-index: 1;
     position: sticky;
     top: 0;
@@ -25,59 +25,72 @@
     text-align: center;
 }
 
-.user-new a{
+.user-new a {
     color: var(--primary-color-2);
+    
+}
+
+.user-new a span{
+    all:unset;
+    border: none;
 }
 
 
-.user-list-menu{
+.user-list-menu {
     height: 100vh;
     width: 20%;
-    background:#111222;
+    background: #111222;
 }
 
-.scroll{
+.scroll {
     overflow-y: scroll;
+    overflow-x: auto;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 7px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: var(--primary-color-2);
     border-radius: 15px;
     height: 20px;
 }
 
-.user-menu-topic{
+.user-menu-topic {
     position: sticky;
     height: 78vh;
-    padding: 24px 0;
+    padding: 10px 0;
 }
 
 
-.topic-list-title{
+.topic-list-title {
     color: #545456;
     font-size: 14px;
     padding-left: 8px;
     font-weight: 600;
-    
+
 }
 
 .topic-list-item{
-    padding: 10px 8px;
-
-}
-
-.topic-list-item a{
-    text-decoration: none;
-    color: white;
+    padding: 10px 0 10px 8px;
     display: flex;
     justify-content: space-between;
+
 }
 
-.topic-item-name{
+.topic-list-item:hover .rename-topic
+.topic-list-item:hover .delete-topic{
+    display: inline-block;
+    color: red;
+}
+
+.topic-list-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.topic-item-name {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -86,17 +99,20 @@
 
 }
 
-.topic-list-item:hover,  
-.user-account-info:hover{
+.topic-list-item:hover,
+.user-account-info:hover {
     background-color: #3d3d3e;
     border-radius: 5px;
 }
 
-.topic-item-icon button{
+.topic-item-icon{
+    display: block;
+    width: 100%;
+}
+
+.topic-item-icon button {
     all: unset;
     padding-left: 8px;
-
-
 }
 
 .user-account{
@@ -124,44 +140,16 @@
     justify-content: space-between;
 }
 
-.account-btn{
+.user-account-info{
+    padding-left: 8px;
+}
+
+.account-btn {
     background: none;
     margin-top: 16px;
     border: none;
     padding: 8px 0;
     outline: none;
-}
-
-.account-btn:focus, .chatPDF-message-btn:focus{
-    outline: none;
-}
-.user-account-box-img {
-
-    font-weight: 600;
-    color: white;
-    padding-left: 8px;
-
-}
-
-.user-account-box-img span{
-    padding: 8px;
-    background-color: var(--primary-color-2);
-}
-
-.account-btn{
-    padding: 8px 0;
-}
-
-.user-account-name{
-    margin-left: 8px;
-    color: white;
-    font-weight: 600;
-}
-
-.user-chatPDF{
-    width: 80%; 
-    position: relative; 
-
 }
 
 .user-logout{
@@ -173,6 +161,38 @@
     color: #545456;
 }
 
+.account-btn:focus,
+.chatPDF-message-btn:focus {
+    outline: none;
+}
+
+.user-account-box-img {
+
+    font-weight: 600;
+    color: white;
+
+}
+
+.user-account-box-img span {
+    padding: 8px;
+    background-color: var(--primary-color-2);
+}
+
+.account-btn {
+    padding: 8px 0;
+}
+
+.user-account-name {
+    margin-left: 8px;
+    color: white;
+    font-weight: 600;
+}
+
+.user-chatPDF {
+    width: 80%;
+    position: relative;
+
+}
 
 .background-image {
     background-image: url('../images/logo.png');
@@ -188,44 +208,46 @@
     opacity: 0.1;
 }
 
-.user-chatPDF-conversation{
+.user-chatPDF-conversation {
     position: sticky;
     height: 85vh;
 }
 
-.user-chat, .chat-chat{
+.user-chat,
+.chat-chat {
     border-bottom: 1px solid #b3b3b5;
     padding: 16px 150px;
 
 }
 
-.chat-chat{
+.chat-chat {
     background-color: #b9b9bd;
 }
 
-.chat-tk span{
+.chat-tk span {
     background-color: var(--primary-color-2);
     padding: 8px;
     color: white;
     font-weight: 600;
 }
 
-.chat-AI span{
+.chat-AI span {
     background-color: var(--primary-color);
     color: white;
     padding: 8px 10px;
 }
 
-.chat-item{
+.chat-item {
     margin: 8px;
     color: var(--primary-color);
 }
 
-.chat-chat .chat-item{
+.chat-chat .chat-item {
     color: var(--primary-color-2);
 }
 
-.chatPDF-message{
+.chatPDF-message {
+    width: 74%;
     margin: 32px 150px;
     bottom: 32px;
     border-radius: 25px;
@@ -239,23 +261,23 @@
     background-color: white;
 }
 
-.chatPDF-message textarea{
-    border: none;
-    width: 100%;
-    resize: none;
-    outline: none;
+.chatPDF-message textarea {
+    width: 100% !important;
+    all: unset;
     padding: 6px 0;
-    margin-right: 8px;
+    margin-right: 8px; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-.chatPDF-message-btn{
-    all:unset;
+.chatPDF-message-btn {
+    all: unset;
     color: #757575;
 }
 
 /* Tài khoản khi không đăng nhập */
 
-.notaccount{
+.notaccount {
     background-color: #111222;
     padding: 16px;
     bottom: 0;
@@ -266,16 +288,22 @@
     width: 20%;
 }
 
-.notaccount h4{
+.notaccount h4 {
     color: var(--primary-color-2);
     margin: 24px 0;
 }
 
-.notaccount-list li{
+.notaccount-list li {
     padding: 10px 0;
     color: #757575;
 }
 
-.notaccount-list li:hover{
+.notaccount-list li:hover {
     color: white;
+}
+
+.highlighted {
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s; */
+    background-color: #3d3d3e;
 }

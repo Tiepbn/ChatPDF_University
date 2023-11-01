@@ -1,8 +1,7 @@
 flask
-login
+datetime
 SQLAlchemy
-flask-wtf
-wtforms
+bcrypt
 openai
 langchain
 PyPDF

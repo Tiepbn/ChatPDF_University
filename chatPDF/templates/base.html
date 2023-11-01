@@ -15,12 +15,28 @@
 </head>
 <body>
     <div class="">
-        <div class="grid"> 
+        <div class="grid">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}" id="myDiv" style="display: none">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
             {% block content %}
             {% endblock %}
-           
+
         </div>
     </div>
+    <script>
+        var mydiv = document.getElementById('myDiv');
+        mydiv.style.display = 'block';
+        setTimeout(function () {
+            mydiv.style.display = 'none'
+        }, 3000);
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 </html>
