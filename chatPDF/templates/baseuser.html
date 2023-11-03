@@ -67,9 +67,9 @@
               class="d-flex w-full items-center account-btn"
             >
               <div class="user-account-box-img">
-                <span>HK</span>
+                <span>{{new_name}}</span>
               </div>
-              <div class="user-account-name">hoangthikhuyen293@gmail.com</div>
+              <div class="user-account-name">{{user.email}}</div>
             </button>
         </div>
       </div>
@@ -132,7 +132,7 @@
         'Content-Type': 'application/json'
       }
     })
-    .then(response => response.json())  // Chuyển đổi phản hồi sang định dạng JSON
+      .then(response => response.json())  // Chuyển đổi phản hồi sang định dạng JSON
       .then(data => {
         // Sử dụng giá trị đã trả về, ví dụ: new_topic_id
         const newTopicId = data.error;
@@ -203,14 +203,14 @@
           'Content-Type': 'application/json'
         }
       })
-      // .then(response => response.json())  // Chuyển đổi phản hồi sang định dạng JSON
-      .then(data => {
-        // Sử dụng giá trị đã trả về, ví dụ: new_topic_id
-        const newTopicId = data.topic;
+        // .then(response => response.json())  // Chuyển đổi phản hồi sang định dạng JSON
+        .then(data => {
+          // Sử dụng giá trị đã trả về, ví dụ: new_topic_id
+          const newTopicId = data.topic;
 
-        // Tiếp tục xử lý hoặc hiển thị giá trị theo ý muốn
-        console.log(data);
-      })
+          // Tiếp tục xử lý hoặc hiển thị giá trị theo ý muốn
+          console.log(data);
+        })
     });
 
     undoButton.addEventListener('click', function () {
@@ -249,42 +249,63 @@
     const bot_chat = 'chat chat';
     const topic_id = "{{topic.id}}";
     messageInput.value = '';
+
+    const userChatDiv = document.createElement('div');
+    userChatDiv.className = 'user-chat';
+    userChatDiv.innerHTML = `
+            <div class="chat-tk" style="display: flex; justify-content: flex-end;" id="scrollable-content">
+                <span class="username">{{ new_name }}</span>
+            </div>
+            <div class="chat-item">${user_chat}</div>
+        `;
+    const conversationContainer = document.querySelector('.user-chatPDF-conversation');
+    conversationContainer.appendChild(userChatDiv);
+
+    const chatChatDiv = document.createElement('div');
+    chatChatDiv.className = 'chat-chat';
+    chatChatDiv.innerHTML = `
+            <div class="chat-AI">
+                <span>
+                    <i class="fas fa-comment"></i>
+                </span>
+            </div>
+            <div class="chat-item"><i class="fa-solid fa-ellipsis fa-spin fa-spin-reverse"></i></div>
+    `;
+    conversationContainer.appendChild(chatChatDiv);
+
     fetch('/add_conversation', {
       method: 'POST',
       body: JSON.stringify({ topic_id: topic_id, user_chat: user_chat, bot_chat: bot_chat }),
       headers: {
         'Content-Type': 'application/json'
       }
-    });
-    var userChatDiv = document.createElement('div');
-    userChatDiv.className = 'user-chat';
+    })
+      .then(data => {
+        // Cập nhật giao diện người dùng với dữ liệu từ phản hồi JSON
+        // const userChatDiv = document.createElement('div');
+        // userChatDiv.className = 'user-chat';
 
-    var chatChatDiv = document.createElement('div');
-    chatChatDiv.className = 'chat-chat';
+        // userChatDiv.innerHTML = `
+        //     <div class="chat-tk" style="display: flex; justify-content: flex-end;">
+        //         <span class="username">{{ new_name }}</span>
+        //     </div>
+        //     <div class="chat-item">${data.user_chat}</div>
+        // `;
 
-    // Thêm nội dung cho divs
-    userChatDiv.innerHTML = `
-      <div class="chat-tk" style="display: flex; justify-content: flex-end;">
-        <span class="username">{{new_name}}</span>
-      </div>
-      <div class="chat-item">${user_chat}</div>
-    `;
-      
-    chatChatDiv.innerHTML = `
-      <div class="chat-AI">
-        <span>
-          <i class="fas fa-comment"></i>
-        </span>
-      </div>
-      <div class="chat-item">${bot_chat}</div>
-    `;
+        chatChatDiv.innerHTML = `
+            <div class="chat-AI">
+                <span>
+                    <i class="fas fa-comment"></i>
+                </span>
+            </div>
+            <div class="chat-item">${data.bot_chat}</div>
+        `;
 
-    // Lấy div container
-    var conversationContainer = document.querySelector('.user-chatPDF-conversation');
+        // const conversationContainer = document.querySelector('.user-chatPDF-conversation');
+        // conversationContainer.appendChild(userChatDiv);
+        conversationContainer.appendChild(chatChatDiv);
+      });
 
-    // Chèn 2 div vào div container
-    conversationContainer.appendChild(userChatDiv);
-    conversationContainer.appendChild(chatChatDiv);
   });
 
 </script>

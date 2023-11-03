@@ -53,6 +53,7 @@ def get_vectorstore(text_chunks):
 prompt = """You are an AI assistant created by Phenikaa University to answer questions about the university and have friendly conversations with students. 
 Your goal is to be helpful, exaclly. 
 If you can't find the information, say you don't know. Don't try to make up answers.
+Break the line every time the paragraph ends.
 Please using Vietnamese"""
 
 def get_conversation_chain(vectorstore):
@@ -65,7 +66,7 @@ def get_conversation_chain(vectorstore):
     )
     return conversation_chain
 
-pdf = get_pdfs_text(["./chatPDF/pdf/Thoi khoa bieu Tuan SHCD K15- Ngày 15.9.2021.pdf", "./chatPDF/pdf/ctdtict1-1.pdf", "./chatPDF/pdf/Thông báo về việc xin miễn giảm và nộp học phí .pdf", "./chatPDF/pdf/Tb_ra_vao_cong.pdf"])
+pdf = get_pdfs_text(["./chatPDF/pdf/Thoi khoa bieu Tuan SHCD K15- Ngày 15.9.2021.pdf","./chatPDF/pdf/Thông báo về việc xin miễn giảm và nộp học phí .pdf", "./chatPDF/pdf/Tb_ra_vao_cong.pdf", "./chatPDF/pdf/ctdtict1-1.pdf"])
 chunks = get_text_chunks(pdf)
 vec = get_vectorstore(chunks)
 
@@ -73,8 +74,6 @@ vec = get_vectorstore(chunks)
 
 def get_current_date():
     return {'current_date': datetime.today().strftime('%d')}
-# def get_current_botchat(name):
-#     return {'bott_chat': name}
 
 app.context_processor(get_current_date) 
 # app.context_processor(get_current_botchat) 

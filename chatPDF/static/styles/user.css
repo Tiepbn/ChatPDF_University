@@ -45,6 +45,7 @@
 .scroll {
     overflow-y: scroll;
     overflow-x: auto;
+    z-index: 1;
 }
 
 ::-webkit-scrollbar {
@@ -167,7 +168,6 @@
 }
 
 .user-account-box-img {
-
     font-weight: 600;
     color: white;
 
@@ -183,6 +183,7 @@
 }
 
 .user-account-name {
+    font-size: 13px;
     margin-left: 8px;
     color: white;
     font-weight: 600;
@@ -215,13 +216,13 @@
 
 .user-chat,
 .chat-chat {
-    border-bottom: 1px solid #b3b3b5;
+    border-bottom: 1px solid #c8c8cc;
     padding: 16px 150px;
 
 }
 
 .chat-chat {
-    background-color: #b9b9bd;
+    background-color: #dbdbdf;
 }
 
 .chat-tk span {
@@ -238,6 +239,7 @@
 }
 
 .chat-item {
+    text-align: justify;
     margin: 8px;
     color: var(--primary-color);
 }
